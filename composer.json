@@ -1,0 +1,18 @@
+{
+    "name": "andreg/vice",
+    "description": "Vice Filament theme",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Andreg\\Vice\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Andrea Gandino",
+            "email": "andreagandino@gmail.com"
+        }
+    ],
+    "require": {}
+}
