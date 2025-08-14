@@ -1,3 +1,12 @@
 @import '../../../../../vendor/filament/filament/resources/css/theme.css';
 @source '../../../../app/Filament';
 @source '../../../../resources/views/filament';
+@import "tailwindcss";
+
+@theme {
+	--radius-xl: .5rem;
+	--radius-lg: .25rem;
+	--radius-md: .15rem;
+	--radius-sm: .05rem;
+	--radius-xs: .025rem;
+}
