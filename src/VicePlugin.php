@@ -3,7 +3,6 @@
 namespace Andreg\Vice;
 
 use Filament\Contracts\Plugin;
-use Filament\FontProviders\GoogleFontProvider;
 use Filament\Panel;
 
 class VicePlugin implements Plugin {
@@ -18,7 +17,6 @@ class VicePlugin implements Plugin {
 
 	public function register( Panel $panel ): void {
 		$panel
-			->font( 'Liter', provider: GoogleFontProvider::class )
 			->viteTheme( 'vendor/andreg/vice/resources/css/theme.css' );
 	}
 
