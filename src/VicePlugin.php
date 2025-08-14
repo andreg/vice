@@ -4,6 +4,7 @@ namespace Andreg\Vice;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
+use Filament\Support\Colors\Color;
 
 class VicePlugin implements Plugin {
 
@@ -17,6 +18,12 @@ class VicePlugin implements Plugin {
 
 	public function register( Panel $panel ): void {
 		$panel
+			->colors( function () {
+				return [
+					'primary' => Color::Indigo,
+					'gray'    => Color::Slate,
+				];
+			} )
 			->viteTheme( 'vendor/andreg/vice/resources/css/theme.css' );
 	}
 

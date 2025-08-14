@@ -1,0 +1,20 @@
+.fi-input-wrp {
+	box-shadow: none;
+	background-color: var(--color-gray-100);
+
+	&:focus-within {
+		box-shadow: 0 0 0px 2px var(--color-primary-500);
+	}
+}
+
+.dark .fi-input-wrp {
+	background-color: var(--color-gray-800);
+}
+
+.fi-input-wrp .fi-input-wrp-prefix {
+	background-color: var(--color-gray-200);
+}
+
+.dark .fi-input-wrp .fi-input-wrp-prefix {
+	background-color: var(--color-gray-800);
+}

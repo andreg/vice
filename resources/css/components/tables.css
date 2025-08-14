@@ -1,0 +1,23 @@
+.fi-ta-ctn {
+	background-color: transparent;
+	box-shadow: none;
+
+	:where(& > :not(:last-child)) {
+		border: none;
+	}
+}
+
+.fi-pagination {
+	display: flex;
+    justify-content: space-between;
+}
+
+.fi-ta-table {
+	:where(& > :not(:last-child)) {
+		border: none;
+	}
+
+	tr {
+		border: none;
+	}
+}

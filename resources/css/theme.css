@@ -3,10 +3,30 @@
 @source '../../../../resources/views/filament';
 @import "tailwindcss";
 
+@import "./components/forms/field.css";
+@import "./components/forms/section.css";
+@import "./components/forms/label.css";
+@import "./components/forms/toggle.css";
+@import "./components/badge.css";
+@import "./components/tables.css";
+
 @theme {
 	--radius-xl: .5rem;
 	--radius-lg: .25rem;
 	--radius-md: .15rem;
 	--radius-sm: .05rem;
 	--radius-xs: .025rem;
+}
+
+:root {
+	--vice-bg: var(--color-white);
+
+	:where( .dark, .dark * ) {
+		--vice-bg: var(--color-gray-900);
+	}
+}
+
+html,
+body {
+	background-color: var(--vice-bg);
 }
