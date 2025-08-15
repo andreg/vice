@@ -20,7 +20,7 @@ class VicePlugin implements Plugin {
 		$panel
 			->colors( function () {
 				return [
-					'primary' => Color::Indigo,
+					'primary' => Color::Blue,
 					'gray'    => Color::Slate,
 				];
 			} )
