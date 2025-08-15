@@ -1,14 +1,9 @@
 .fi-section {
 	background-color: var(--vice-bg);
-	box-shadow: 0 0 0px 2px var(--color-gray-200);
-}
-
-.dark .fi-section {
-	box-shadow: 0 0 0px 2px var(--color-gray-700);
+	box-shadow: 0 0 0px 1px var(--color-gray-200);
 }
 
 .fi-section-header {
-	background-color: var(--color-gray-50);
 	overflow: hidden;
 	/* padding-inline: 0; */
 	border-top-left-radius: calc( var(--radius-xl) );
@@ -24,7 +19,7 @@
 }
 
 .fi-section-content-ctn {
-	border-block-start-width: 4px;
+	border-block-start-width: 1px;
 	border-block-start-color: var(--color-gray-200);
 }
 

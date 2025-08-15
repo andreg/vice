@@ -1,20 +1,19 @@
 .fi-input-wrp {
-	box-shadow: none;
-	background-color: var(--color-gray-100);
+	box-shadow: 0 0 0px 1px var(--color-gray-200);
 
 	&:focus-within {
 		box-shadow: 0 0 0px 2px var(--color-primary-500);
 	}
 }
 
-.dark .fi-input-wrp {
-	background-color: var(--color-gray-800);
+input[list]::-webkit-calendar-picker-indicator {
+	opacity: 0;
 }
 
 .fi-input-wrp .fi-input-wrp-prefix {
 	background-color: var(--color-gray-200);
 }
 
-.dark .fi-input-wrp .fi-input-wrp-prefix {
-	background-color: var(--color-gray-800);
+.fi-input-has-inline-prefix {
+	padding-inline-start: calc(var(--spacing) * 3);
 }

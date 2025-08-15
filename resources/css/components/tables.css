@@ -10,6 +10,7 @@
 .fi-pagination {
 	display: flex;
     justify-content: space-between;
+	flex-direction: row-reverse;
 }
 
 .fi-ta-table {
@@ -20,4 +21,22 @@
 	tr {
 		border: none;
 	}
+
+	thead tr {
+		background-color: transparent;
+		border-block-end: 1px solid var(--color-gray-200);
+	}
+
+	tbody tr:not(:last-child) {
+		border-block-end: 1px solid var(--color-gray-100);
+	}
+
+	tbody tr:hover {
+		background-color: var(--color-gray-50);
+	}
+}
+
+.enhanced-badge {
+	margin-inline-start: .5rem;
+	display: inline-flex;
 }
