@@ -18,3 +18,11 @@ input[list]::-webkit-calendar-picker-indicator {
 .fi-input-has-inline-prefix {
 	padding-inline-start: calc(var(--spacing) * 3);
 }
+
+.fi-input-wrp {
+    & .fi-input-wrp-prefix {
+        &.fi-inline {
+            padding-inline-end: calc(var(--spacing) * 3);
+        }
+    }
+}
