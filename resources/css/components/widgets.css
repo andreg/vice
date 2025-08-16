@@ -1,0 +1,4 @@
+.fi-wi-stats-overview-stat {
+	box-shadow: 0 0 0 1px var(--color-gray-200);
+	border-radius: var(--radius-lg);
+}

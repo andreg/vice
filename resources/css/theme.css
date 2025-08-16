@@ -9,6 +9,7 @@
 @import "./components/forms/toggle.css";
 @import "./components/badge.css";
 @import "./components/tables.css";
+@import "./components/widgets.css";
 
 @theme {
 	--radius-xl: .5rem;
@@ -45,7 +46,7 @@ body {
 
 .fi-sidebar-item.fi-active {
 	border-radius: var(--radius-lg);
-	border: 1px solid var(--color-gray-300);
+	box-shadow: 0 0 0 1px var(--color-gray-300);
 
 	& > .fi-sidebar-item-btn {
 		background-color: var(--color-white);

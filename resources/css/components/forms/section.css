@@ -3,6 +3,11 @@
 	box-shadow: 0 0 0px 1px var(--color-gray-200);
 }
 
+.fi-section-not-contained {
+	padding: calc(var(--spacing) * 6);
+	border-radius: var(--radius-xl);
+}
+
 .fi-section-header {
 	overflow: hidden;
 	/* padding-inline: 0; */
@@ -14,7 +19,7 @@
 	background-color: var(--color-gray-800);
 }
 
-.fi-section-content-ctn {
+.fi-section:not(.fi-section-not-contained) .fi-section-content-ctn {
 	border-block-start-width: 1px;
 	border-block-start-color: var(--color-gray-200);
 }
