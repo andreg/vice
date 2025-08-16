@@ -1,5 +1,5 @@
 .fi-section {
-	background-color: var(--vice-bg);
+	background-color: transparent;
 	box-shadow: 0 0 0px 1px var(--color-gray-200);
 }
 
@@ -12,10 +12,6 @@
 
 .dark .fi-section-header {
 	background-color: var(--color-gray-800);
-}
-
-.fi-section-content {
-	/* padding-inline: 0; */
 }
 
 .fi-section-content-ctn {

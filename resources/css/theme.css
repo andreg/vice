@@ -19,7 +19,7 @@
 }
 
 :root {
-	--vice-bg: var(--color-white);
+	--vice-bg: var(--color-gray-100);
 
 	:where( .dark, .dark * ) {
 		--vice-bg: var(--color-gray-900);
@@ -29,4 +29,25 @@
 html,
 body {
 	background-color: var(--vice-bg);
+}
+
+.fi-topbar {
+	background-color: transparent;
+	box-shadow: none;
+}
+
+.fi-main-ctn {
+	background-color: var(--color-white);
+	border-top-left-radius: var(--radius-xl);
+	margin-block-start: calc(var(--spacing) * 3);
+	border: 1px solid var(--color-gray-300);
+}
+
+.fi-sidebar-item.fi-active {
+	border-radius: var(--radius-lg);
+	border: 1px solid var(--color-gray-300);
+
+	& > .fi-sidebar-item-btn {
+		background-color: var(--color-white);
+	}
 }

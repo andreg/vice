@@ -11,14 +11,6 @@ input[list]::-webkit-calendar-picker-indicator {
 	opacity: 0;
 }
 
-.fi-input-wrp .fi-input-wrp-prefix {
-	background-color: var(--color-gray-200);
-}
-
-.fi-input-has-inline-prefix {
-	padding-inline-start: calc(var(--spacing) * 3);
-}
-
 .fi-input-wrp {
     & .fi-input-wrp-prefix {
         &.fi-inline {

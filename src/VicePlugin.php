@@ -18,9 +18,10 @@ class VicePlugin implements Plugin {
 
 	public function register( Panel $panel ): void {
 		$panel
+			->spa()
 			->colors( function () {
 				return [
-					'primary' => Color::Blue,
+					'primary' => Color::Slate,
 					'gray'    => Color::Slate,
 				];
 			} )
