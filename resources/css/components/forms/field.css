@@ -1,5 +1,6 @@
 .fi-input-wrp {
 	box-shadow: 0 0 0px 1px var(--color-gray-200);
+	overflow: hidden;
 
 	&:focus-within {
 		box-shadow: 0 0 0px 2px var(--color-primary-500);

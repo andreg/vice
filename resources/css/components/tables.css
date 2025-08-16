@@ -7,10 +7,35 @@
 	}
 }
 
+.fi-ta-ctn {
+	& .fi-ta-header-toolbar {
+		border-top: none;
+
+		@media (width >= 40rem) {
+			padding-inline: 0;
+		}
+	}
+}
+
 .fi-pagination {
 	display: flex;
-    justify-content: space-between;
+	justify-content: space-between;
 	flex-direction: row-reverse;
+}
+
+.fi-ta-ctn {
+	overflow: visible;
+
+	& .fi-pagination {
+		@media (width >= 40rem) {
+			padding-inline: 0;
+		}
+	}
+}
+
+.fi-ta-content-ctn {
+	border: 1px solid var(--color-gray-200);
+	border-radius: var(--radius-lg);
 }
 
 .fi-ta-table {
@@ -33,6 +58,36 @@
 
 	tbody tr:hover {
 		background-color: var(--color-gray-50);
+	}
+}
+
+.fi-ta-filter-indicators {
+	border-radius: var(--radius-lg);
+}
+
+.fi-ta-ctn {
+	& .fi-ta-filter-indicators {
+		@media (width >= 40rem) {
+			padding-inline: calc(var(--spacing) * 4);
+		}
+	}
+}
+
+.fi-ta-header-cell {
+	@media (width >= 40rem) {
+		&:first-of-type {
+			padding-inline: calc(var(--spacing) * 4);
+		}
+	}
+}
+
+.fi-ta-row {
+	> .fi-ta-cell:first-of-type {
+		padding-inline-start: calc(var(--spacing) * 1);
+	}
+
+	> .fi-ta-cell:last-of-type {
+		padding-inline-end: calc(var(--spacing) * 1);
 	}
 }
 
