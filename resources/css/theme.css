@@ -7,9 +7,11 @@
 @import "./layout/navigation.css";
 @import "./components/badge.css";
 @import "./components/table.css";
+@import "./components/form/form.css";
 @import "./components/form/section.css";
 @import "./components/form/field.css";
 @import "./components/form/toggle.css";
+@import "./components/widgets/stats-overview.css";
 
 :root {
 	--radius-2xl: 1rem;
