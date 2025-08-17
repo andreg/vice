@@ -14,6 +14,18 @@
 .fi-body-has-top-navigation {
 	.fi-topbar {
 		background-color: var( --vice-color-bg-canvas );
+
+		&:before {
+			position: absolute;
+			content: "";
+			display: block;
+			left: 0;
+			right: 0;
+			width: 100%;
+			top: 100%;
+			background: linear-gradient(in oklch to bottom, var( --vice-color-bg-canvas ), transparent);
+			height: calc( var(--spacing) * 8 );
+		}
 	}
 
 	.fi-active {
