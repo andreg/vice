@@ -1,0 +1,22 @@
+label[for] {
+	cursor: pointer;
+}
+
+.fi-input-wrp {
+	box-shadow: 0 0 0 1px var(--vice-color-bg-separation);
+
+	&:focus-within {
+		box-shadow:
+			0 0 0 1px var(--color-primary-500),
+			0 0 0 5px oklch( from var( --color-primary-500 ) l c h / 0.2 );
+	}
+}
+
+.fi-input-wrp {
+    & .fi-input-wrp-prefix,
+	& .fi-input-wrp-suffix {
+        &:not(.fi-inline) {
+			border-color: var(--vice-color-bg-separation-dimmed);
+		}
+	}
+}

@@ -1,12 +1,11 @@
 .fi-ta .fi-ta-ctn {
 	--tw-shadow-color: transparent;
 	--tw-ring-color: transparent;
+	background-color: transparent;
+	overflow: visible;
 }
 
-.fi-ta-header-ctn {
-	border-bottom-width: 0;
-}
-
+.fi-ta-header-ctn,
 .fi-ta-content-ctn {
 	border-bottom-width: 0;
 }
@@ -16,7 +15,13 @@
 }
 
 .fi-ta-table {
+	& > tbody > :not(:last-child) {
+		border-color: var(--vice-color-bg-separation-dimmed);
+	}
+
     & > thead {
+		border-color: var(--vice-color-bg-separation);
+
 		& > tr {
 			background: transparent;
 		}
@@ -28,6 +33,16 @@
 			padding-inline-start: 0;
 			padding-inline-end: 0;
 	}
+}
+
+.fi-ta-row {
+    &.fi-clickable {
+        &:hover {
+            @media (hover: hover) {
+                background-color: transparent;
+            }
+        }
+    }
 }
 
 .fi-ta-cell {

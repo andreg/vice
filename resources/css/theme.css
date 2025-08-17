@@ -7,6 +7,9 @@
 @import "./layout/navigation.css";
 @import "./components/badge.css";
 @import "./components/table.css";
+@import "./components/form/section.css";
+@import "./components/form/field.css";
+@import "./components/form/toggle.css";
 
 :root {
 	--radius-2xl: 1rem;
@@ -22,6 +25,8 @@
 	--vice-color-bg-canvas: var(--color-gray-50);
 	--vice-color-bg-main: var(--color-white);
 	--vice-color-bg-separation: var(--color-gray-300);
+	--vice-color-bg-separation-dimmed: var(--color-gray-200);
+	--vice-color-bg-separation-fainted: var(--color-gray-50);
 
 	&.dark {
 		--vice-color-text: var(--color-gray-400 );
@@ -30,5 +35,7 @@
 		--vice-color-bg-canvas: var(--color-gray-900);
 		--vice-color-bg-main: var(--color-gray-800);
 		--vice-color-bg-separation: var(--color-gray-600);
+		--vice-color-bg-separation-dimmed: var(--color-gray-700);
+		--vice-color-bg-separation-fainted: var(--color-gray-900);
 	}
 }

@@ -3,7 +3,7 @@
 	border-radius: var(--radius-lg);
 
 	&.fi-color {
-		--text: var(--color-500);
+		--text: var(--color-600);
 		background-color: var(--color-200);
 	}
 }

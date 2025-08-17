@@ -1,0 +1,23 @@
+.fi-toggle {
+	& > :first-child {
+		width: calc(var(--spacing) * 3);
+        height: calc(var(--spacing) * 3);
+		--tw-translate-y: calc(var(--spacing) * 1);
+		box-shadow: none;
+	}
+}
+
+.fi-toggle-on {
+	--bg: var(--color-primary-500 );
+	--dark-bg: var(--color-primary-500 );
+
+	& > :first-child {
+		--tw-translate-x: calc(var(--spacing) * 6);
+	}
+}
+
+.fi-toggle-off {
+	& > :first-child {
+		--tw-translate-x: calc(var(--spacing) * 1);
+	}
+}

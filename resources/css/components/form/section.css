@@ -1,0 +1,16 @@
+.fi-section {
+	box-shadow: 0 0 0 1px var(--vice-color-bg-separation);
+	background-color: transparent;
+	border-radius: var(--radius-xl);
+}
+
+.fi-section-not-contained {
+	padding: calc(var(--spacing) * 6);
+	background-color: var(--vice-color-bg-separation-fainted);
+}
+
+.fi-section-header {
+	background-color: var(--vice-color-bg-separation-fainted);
+	border-top-left-radius: var(--radius-xl);
+	border-top-right-radius: var(--radius-xl);
+}
