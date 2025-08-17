@@ -3,6 +3,7 @@
 namespace Andreg\Vice;
 
 use Filament\Contracts\Plugin;
+use Filament\FontProviders\LocalFontProvider;
 use Filament\Panel;
 use Filament\Support\Colors\Color;
 
@@ -18,7 +19,12 @@ class VicePlugin implements Plugin {
 
 	public function register( Panel $panel ): void {
 		$panel
-			->spa()
+			->topNavigation()
+			->font(
+				family: 'InterVariable',
+				url: secure_asset( 'vendor/andreg/vice/fonts/inter.css' ),
+				provider: LocalFontProvider::class
+			)
 			->colors( function () {
 				return [
 					'primary' => Color::Slate,

@@ -1,3 +1,14 @@
 .fi-badge {
-	box-shadow: none;
+	--tw-shadow: none;
+	border-radius: var(--radius-lg);
+
+	&.fi-color {
+		--text: var(--color-500);
+		background-color: var(--color-200);
+	}
+}
+
+.dark .fi-badge.fi-color {
+	--dark-text: var(--color-800);
+	background-color: var(--color-300);
 }

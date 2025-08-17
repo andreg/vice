@@ -1,0 +1,56 @@
+.fi-ta .fi-ta-ctn {
+	--tw-shadow-color: transparent;
+	--tw-ring-color: transparent;
+}
+
+.fi-ta-header-ctn {
+	border-bottom-width: 0;
+}
+
+.fi-ta-content-ctn {
+	border-bottom-width: 0;
+}
+
+.fi-ta-header-toolbar {
+	padding-inline: 1px;
+}
+
+.fi-ta-table {
+    & > thead {
+		& > tr {
+			background: transparent;
+		}
+	}
+}
+
+.fi-ta-header-cell {
+    @media (width >= 40rem) {
+			padding-inline-start: 0;
+			padding-inline-end: 0;
+	}
+}
+
+.fi-ta-cell {
+    @media (width >= 40rem) {
+        &:first-of-type {
+			padding-inline-start: 0;
+		}
+
+		&:last-of-type {
+			padding-inline-end: 0;
+		}
+	}
+}
+
+.fi-ta-text {
+    &:not(.fi-inline) {
+		padding-inline-start: 0;
+	}
+}
+
+.fi-pagination {
+	padding-inline: 1px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+}

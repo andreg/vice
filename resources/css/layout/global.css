@@ -1,0 +1,52 @@
+:root {
+	font-feature-settings: "tnum", "ss01", "zero", "cv11";
+}
+
+.fi-body {
+	color: var( --vice-color-text );
+}
+
+.fi-ta-text-item {
+	color: inherit;
+}
+
+.fi-fo-field-label-content {
+	color: var( --vice-color-text-strong );
+}
+
+.fi-logo,
+.fi-font-semibold,
+.fi-section-header-heading,
+.fi-wi-stats-overview-stat-value {
+	color: var( --vice-color-text-stronger );
+}
+
+html,
+body {
+	background-color: var( --vice-color-bg-canvas );
+}
+
+.fi-main {
+	background-color: var( --vice-color-bg-main );
+	border-block-start: 1px solid var(--vice-color-bg-separation);
+	border-inline-start: 1px solid var(--vice-color-bg-separation);
+	border-top-left-radius: var(--radius-2xl);
+
+	@media (width <= 1023px) {
+		border-top-left-radius: 0;
+		border-inline-start: none;
+	}
+
+	@media (width >= 64rem) {
+		padding-inline: calc(var(--spacing) * 12);
+		padding-block: calc(var(--spacing) * 4);
+	}
+}
+
+.fi-body-has-top-navigation {
+	.fi-main {
+		margin-block-start: calc(var(--spacing) * 8);
+		border-inline-end: 1px solid var(--vice-color-bg-separation);
+		border-top-right-radius: var(--radius-2xl);
+	}
+}
