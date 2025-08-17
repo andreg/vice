@@ -14,6 +14,10 @@
 	color: inherit;
 }
 
+.fi-ta-text-description {
+	color: var(--vice-color-text-weak);
+}
+
 .fi-fo-field-label-content {
 	color: var( --vice-color-text-strong );
 }
@@ -31,6 +35,7 @@ body {
 }
 
 .fi-main {
+	min-height: 100vh;
 	background-color: var( --vice-color-bg-main );
 	border-block-start: 1px solid var(--vice-color-bg-separation);
 	border-inline-start: 1px solid var(--vice-color-bg-separation);

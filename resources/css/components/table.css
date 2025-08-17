@@ -12,6 +12,7 @@
 
 .fi-ta-header-toolbar {
 	padding-inline: 1px;
+	border-top: none;
 }
 
 .fi-ta-table {

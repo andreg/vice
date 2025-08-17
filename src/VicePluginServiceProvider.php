@@ -19,9 +19,13 @@ class VicePluginServiceProvider extends PackageServiceProvider {
 		parent::boot();
 
 		if ( $this->app->runningInConsole() ) {
+			$this->commands( [
+				Console\Commands\InstallViceCommand::class,
+			] );
+
 			$this->publishes( [
 				__DIR__ . '/../resources/dist' => public_path( 'vendor/andreg/vice' ),
-			], [ 'vice-assets', 'laravel-assets' ] );
+			], [ 'vice-assets' ] );
 		}
 	}
 

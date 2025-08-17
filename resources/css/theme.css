@@ -22,6 +22,7 @@
 	--radius-xs: .025rem;
 
 	--vice-color-text: var(--color-gray-500 );
+	--vice-color-text-weak: var(--color-gray-400 );
 	--vice-color-text-strong: var(--color-gray-700 );
 	--vice-color-text-stronger: var(--color-gray-900 );
 	--vice-color-bg-canvas: var(--color-gray-50);
@@ -32,6 +33,7 @@
 
 	&.dark {
 		--vice-color-text: var(--color-gray-400 );
+		--vice-color-text-weak: var(--color-gray-600 );
 		--vice-color-text-strong: var(--color-gray-200 );
 		--vice-color-text-stronger: var(--color-white );
 		--vice-color-bg-canvas: var(--color-gray-900);
