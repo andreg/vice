@@ -1,7 +1,16 @@
-.fi-section {
+.fi-section:not(.fi-loading-section) {
 	box-shadow: 0 0 0 1px var(--vice-color-bg-separation);
 	background-color: transparent;
 	border-radius: var(--radius-xl);
+}
+
+.fi-section {
+	&:not(.fi-section-not-contained) {
+		&:not(.fi-aside) {
+			--tw-shadow: none;
+			--tw-ring-shadow: none;
+		}
+	}
 }
 
 .fi-section-not-contained {
