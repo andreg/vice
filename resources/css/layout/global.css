@@ -37,9 +37,16 @@ body {
 .fi-main {
 	min-height: 100vh;
 	background-color: var( --vice-color-bg-main );
+
 	border-block-start: 1px solid var(--vice-color-bg-separation);
-	border-inline-start: 1px solid var(--vice-color-bg-separation);
+	border-inline: 1px solid var(--vice-color-bg-separation);
 	border-top-left-radius: var(--radius-2xl);
+	border-top-right-radius: var(--radius-2xl);
+
+	@media (width <= 1601px) {
+		border-top-right-radius: 0;
+		border-inline-end: none;
+	}
 
 	@media (width <= 1023px) {
 		border-top-left-radius: 0;
@@ -55,7 +62,5 @@ body {
 .fi-body-has-top-navigation {
 	.fi-main {
 		margin-block-start: calc(var(--spacing) * 8);
-		border-inline-end: 1px solid var(--vice-color-bg-separation);
-		border-top-right-radius: var(--radius-2xl);
 	}
 }

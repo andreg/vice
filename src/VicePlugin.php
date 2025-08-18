@@ -19,10 +19,10 @@ class VicePlugin implements Plugin {
 
 	public function register( Panel $panel ): void {
 		$panel
-			->topNavigation()
+			// ->topNavigation()
 			->font(
 				family: 'InterVariable',
-				url: secure_asset( 'vendor/andreg/vice/fonts/inter.css' ),
+				url: asset( 'vendor/andreg/vice/fonts/inter.css' ),
 				provider: LocalFontProvider::class
 			)
 			->colors( function () {
