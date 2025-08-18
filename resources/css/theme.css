@@ -7,6 +7,7 @@
 @import "./layout/navigation.css";
 @import "./components/badge.css";
 @import "./components/table.css";
+@import "./components/tabs.css";
 @import "./components/form/form.css";
 @import "./components/form/section.css";
 @import "./components/form/field.css";
