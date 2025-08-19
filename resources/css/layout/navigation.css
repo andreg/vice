@@ -39,7 +39,7 @@
 	color: var(--vice-color-text);
 }
 
-.fi-active {
+.fi-sidebar-item.fi-active {
 	> [class*="-item-btn"] {
 		@apply vice-sectioning-box;
 

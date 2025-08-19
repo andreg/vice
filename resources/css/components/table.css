@@ -107,3 +107,20 @@
 	justify-content: space-between;
 	flex-direction: row-reverse;
 }
+
+.fi-ta-summary-header-row {
+	background: transparent;
+
+	.fi-ta-summary-header-cell {
+		padding-inline: 0;
+	}
+}
+
+
+.fi-ta-summary-row {
+	background: transparent;
+
+	.fi-ta-text-summary {
+		padding-inline: 0;
+	}
+}
