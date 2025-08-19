@@ -23,3 +23,7 @@
 	border-top-left-radius: var(--radius-xl);
 	border-top-right-radius: var(--radius-xl);
 }
+
+.fi-section-content-ctn {
+	border-top-color: var(--vice-color-bg-separation-dimmed);
+}

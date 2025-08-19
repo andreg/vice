@@ -25,7 +25,8 @@
 .fi-logo,
 .fi-font-semibold,
 .fi-section-header-heading,
-.fi-wi-stats-overview-stat-value {
+.fi-wi-stats-overview-stat-value,
+.fi-fo-repeater-item-header-label {
 	color: var( --vice-color-text-stronger );
 }
 

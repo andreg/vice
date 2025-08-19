@@ -1,0 +1,25 @@
+.fi-fo-repeater-item {
+	box-shadow: 0 0 0 1px var(--vice-color-bg-separation);
+	background-color: transparent;
+
+	.fi-fo-repeater-item-header {
+		background-color: var(--vice-color-bg-separation-fainted);
+		border-top-right-radius: var(--radius-xl);
+		border-top-left-radius: var(--radius-xl);
+		overflow: hidden;
+		border-bottom: none;
+		padding-inline: calc(var(--spacing) * 6);
+	}
+
+	&:not(.fi-collapsed) .fi-fo-repeater-item-header {
+		border-bottom: 1px solid var(--vice-color-bg-separation-dimmed);
+	}
+
+	&.fi-collapsed .fi-fo-repeater-item-header {
+		background-color: transparent;
+	}
+
+	.fi-fo-repeater-item-content {
+		padding: calc(var(--spacing) * 6);
+	}
+}
