@@ -28,7 +28,8 @@
 .fi-font-semibold,
 .fi-section-header-heading,
 .fi-wi-stats-overview-stat-value,
-.fi-fo-repeater-item-header-label {
+.fi-fo-repeater-item-header-label,
+.fi-ta-header-cell {
 	color: var( --vice-color-text-stronger );
 }
 
