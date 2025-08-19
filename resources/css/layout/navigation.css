@@ -41,8 +41,13 @@
 
 .fi-active {
 	> [class*="-item-btn"] {
+		@apply vice-sectioning-box;
+
 		background-color: var( --vice-color-bg-main );
-		box-shadow: 0 0 0 1px var( --vice-color-bg-separation );
+		border-radius: var(--radius-lg);
+		/* box-shadow:
+			0 0 0 1px var( --vice-color-bg-separation ),
+			var( --vice-color-bg-separation-shadow ); */
 
 		> [class*="-item-label"] {
 			color: var( --vice-color-text-stronger );

@@ -14,11 +14,13 @@
 	color: inherit;
 }
 
-.fi-ta-text-description {
+.fi-ta-text-description,
+.fi-input-wrp + .fi-sc .fi-sc-text {
 	color: var(--vice-color-text-weak);
 }
 
-.fi-fo-field-label-content {
+.fi-fo-field-label-content,
+.fi-fo-radio-label-text {
 	color: var( --vice-color-text-strong );
 }
 

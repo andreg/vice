@@ -1,0 +1,8 @@
+.fi-fo-radio-label-text {
+	cursor: pointer;
+}
+
+.fi-radio-input:focus,
+.fi-radio-input:checked {
+	box-shadow: 0 0 0 3px var(--vice-color-bg-separation-dimmed);
+}

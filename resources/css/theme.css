@@ -14,6 +14,7 @@
 @import "./components/form/field.css";
 @import "./components/form/toggle.css";
 @import "./components/form/repeater.css";
+@import "./components/form/radio.css";
 @import "./components/widgets/stats-overview.css";
 
 :root {
@@ -33,6 +34,7 @@
 	--vice-color-bg-separation: var(--color-gray-300);
 	--vice-color-bg-separation-dimmed: var(--color-gray-200);
 	--vice-color-bg-separation-fainted: var(--color-gray-50);
+	--vice-color-bg-separation-shadow: 0 2px 0 1px oklch( from var(--vice-color-bg-separation) l c h / 0.3 );
 
 	&.dark {
 		--vice-color-text: var(--color-gray-400 );
@@ -44,11 +46,14 @@
 		--vice-color-bg-separation: var(--color-gray-600);
 		--vice-color-bg-separation-dimmed: var(--color-gray-700);
 		--vice-color-bg-separation-fainted: var(--color-gray-900);
+		--vice-color-bg-separation-shadow: 0 2px 0 1px oklch( from var(--vice-color-bg-separation-fainted) l c h / 0.6 );
 	}
 }
 
 @utility vice-sectioning-box {
-	box-shadow: 0 0 0 1px var(--vice-color-bg-separation);
+	box-shadow:
+		0 0 0 1px var(--vice-color-bg-separation),
+		var( --vice-color-bg-separation-shadow );
 	background-color: transparent;
 	border-radius: var(--radius-xl);
 }

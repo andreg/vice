@@ -1,5 +1,4 @@
 .fi-wi-stats-overview-stat {
-	background-color: var( --vice-color-bg-main );
-	border-radius: var(--radius-lg);
-	box-shadow: 0 0 0 1px var(--vice-color-bg-separation);
+	@apply vice-sectioning-box;
+	background-color: var(--vice-color-bg-separation-fainted);
 }
