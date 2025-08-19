@@ -1,7 +1,5 @@
 .fi-section:not(.fi-loading-section) {
-	box-shadow: 0 0 0 1px var(--vice-color-bg-separation);
-	background-color: transparent;
-	border-radius: var(--radius-xl);
+	@apply vice-sectioning-box;
 }
 
 .fi-section {
@@ -13,17 +11,15 @@
 	}
 }
 
-.fi-section-not-contained {
-	padding: calc(var(--spacing) * 6);
-	background-color: var(--vice-color-bg-separation-fainted);
+.fi-section.fi-section-not-contained {
+	background-color: transparent;
+	box-shadow: none;
 }
 
 .fi-section-header {
-	background-color: var(--vice-color-bg-separation-fainted);
-	border-top-left-radius: var(--radius-xl);
-	border-top-right-radius: var(--radius-xl);
-}
+	@apply vice-sectioning-box-header;
 
-.fi-section-content-ctn {
-	border-top-color: var(--vice-color-bg-separation-dimmed);
+	& + .fi-section-content-ctn {
+		@apply vice-sectioning-box-content;
+	}
 }

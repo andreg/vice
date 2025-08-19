@@ -1,6 +1,5 @@
 .fi-fo-repeater-item {
-	box-shadow: 0 0 0 1px var(--vice-color-bg-separation);
-	background-color: transparent;
+	@apply vice-sectioning-box;
 
 	.fi-fo-repeater-item-header {
 		background-color: var(--vice-color-bg-separation-fainted);
