@@ -1,0 +1,23 @@
+.tippy-box {
+	box-shadow: 0 0 0 1px var(--vice-color-bg-separation);
+	background-color: var(--vice-color-bg-separation-fainted);
+	border-radius: var(--radius-lg);
+	font-size: var(--text-xs);
+	line-height: var(--text-xs--line-height);
+}
+
+.tippy-arrow {
+	display: none;
+	box-shadow: none;
+	background-color: transparent;
+	z-index: -1;
+
+	&::before {
+		border-right: 1px solid var(--vice-color-bg-separation);
+		border-bottom: 1px solid var(--vice-color-bg-separation);
+		box-shadow: none;
+		background-color: var(--vice-color-bg-separation-fainted);
+		transform: translateY(35%) translateX(35%) rotate( 45deg );
+		inset: 0;
+	}
+}
