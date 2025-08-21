@@ -83,54 +83,7 @@
 		z-index: 1;
 	}
 
-	> .fi-sc > .fi-grid-col:first-child {
-		.fi-grid-col:first-child {
-			.fi-input-wrp {
-				border-top-right-radius: 0;
-				border-bottom-right-radius: 0;
-				border-bottom-left-radius: 0;
-			}
-		}
-
-		.fi-grid-col + .fi-grid-col:last-child {
-			.fi-input-wrp {
-				border-top-left-radius: 0;
-				border-top-right-radius: revert-layer;
-				border-bottom-left-radius: 0;
-				border-bottom-right-radius: 0;
-			}
-		}
-	}
-
-	> .fi-sc > .fi-grid-col:last-child {
-		.fi-grid-col:first-child {
-			.fi-input-wrp {
-				border-top-right-radius: 0;
-				border-top-left-radius: 0;
-				border-bottom-right-radius: 0;
-				border-bottom-left-radius: revert-layer;
-			}
-		}
-
-		.fi-grid-col:last-child:first-child {
-			.fi-input-wrp {
-				border-bottom-right-radius: revert-layer;
-			}
-		}
-
-		.fi-grid-col + .fi-grid-col:last-child {
-			.fi-input-wrp {
-				border-top-left-radius: 0;
-				border-bottom-right-radius: revert-layer;
-				border-bottom-left-radius: 0;
-				border-top-right-radius: 0;
-			}
-		}
-	}
-
-	> .fi-sc > .fi-grid-col + .fi-grid-col {
-		.fi-input-wrp {
-			border-radius: 0;
-		}
+	.fi-input-wrp {
+		border-radius: 0;
 	}
 }
