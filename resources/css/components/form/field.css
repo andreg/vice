@@ -20,3 +20,20 @@ label[for] {
 		}
 	}
 }
+
+.fe-grouped-inputs {
+	isolation: isolate;
+	padding-top: calc( var(--spacing) * 2 );
+
+	.fi-sc {
+		gap: 1px;
+	}
+
+	.fi-fo-field-label-col {
+		display: none;
+	}
+
+	.fi-input-wrp:focus-within {
+		z-index: 1;
+	}
+}

@@ -1,7 +1,7 @@
 @import '../../../../../vendor/filament/filament/resources/css/theme.css';
 @source '../../../../../packages/andreg/filament-enhancer';
-@source '../../../../app/Filament';
-@source '../../../../resources/views/filament';
+@source '../../../../../app/Filament';
+@source '../../../../../resources/views/filament';
 @import "tailwindcss";
 
 @import "./layout/global.css";
@@ -68,23 +68,3 @@
 @utility vice-sectioning-box-content {
 	border-top-color: var(--vice-color-bg-separation-dimmed);
 }
-
-/* .uuu {
-	isolation: isolate;
-
-	.fi-sc {
-		gap: 1px;
-	}
-
-	.fi-fo-field-label-col {
-		display: none;
-	}
-
-	.fi-input-wrp:focus-within {
-		z-index: 1;
-	}
-
-	*:where(.fi-input-wrp) {
-		border-radius: 0;
-	}
-} */
