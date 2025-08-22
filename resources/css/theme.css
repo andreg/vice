@@ -1,5 +1,5 @@
 @import '../../../../../vendor/filament/filament/resources/css/theme.css';
-@source '../../../../../packages/andreg/filament-enhancer';
+@source '../../../../../vendor/andreg/filament-enhancer';
 @source '../../../../../app/Filament';
 @source '../../../../../resources/views/filament';
 @import "tailwindcss";
