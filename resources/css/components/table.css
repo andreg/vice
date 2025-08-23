@@ -5,10 +5,14 @@
 	overflow: visible;
 }
 
-.fi-ta-header-ctn,
-.fi-ta-content-ctn {
+.fi-ta-header-ctn {
 	border-bottom-width: 0;
 	overflow: visible;
+}
+
+.fi-ta-content-ctn {
+	border-bottom-width: 0;
+	overflow: scroll;
 }
 
 .fi-ta-ctn .fi-ta-header-toolbar {
