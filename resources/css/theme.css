@@ -1,8 +1,5 @@
-@import '../../../../../vendor/filament/filament/resources/css/theme.css';
-@source '../../../../../vendor/andreg/filament-enhancer';
-@source '../../../../../app/Filament';
-@source '../../../../../resources/views/filament';
 @import "tailwindcss";
+@import '../../../../../vendor/filament/filament/resources/css/theme.css';
 
 @import "./layout/global.css";
 @import "./layout/navigation.css";
@@ -17,6 +14,10 @@
 @import "./components/form/repeater.css";
 @import "./components/form/radio.css";
 @import "./components/widgets/stats-overview.css";
+
+@source '../../../../../vendor/andreg/filament-enhancer';
+@source '../../../../../app/Filament';
+@source '../../../../../resources/views/filament';
 
 :root {
 	--radius-2xl: 1rem;
