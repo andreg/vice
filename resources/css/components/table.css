@@ -5,10 +5,14 @@
 	overflow: visible;
 }
 
-.fi-ta-header-ctn,
-.fi-ta-content-ctn {
+.fi-ta-header-ctn {
 	border-bottom-width: 0;
 	overflow: visible !important;
+}
+
+.fi-ta-content-ctn {
+	border-bottom-width: 0;
+	overflow: scroll;
 }
 
 .fi-ta-ctn .fi-ta-header-toolbar {
@@ -106,4 +110,21 @@
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row-reverse;
+}
+
+.fi-ta-summary-header-row {
+	background: transparent;
+
+	.fi-ta-summary-header-cell {
+		padding-inline: 0;
+	}
+}
+
+
+.fi-ta-summary-row {
+	background: transparent;
+
+	.fi-ta-text-summary {
+		padding-inline: 0;
+	}
 }
