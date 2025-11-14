@@ -8,7 +8,7 @@
 .fi-ta-header-ctn,
 .fi-ta-content-ctn {
 	border-bottom-width: 0;
-	overflow: visible;
+	overflow: visible !important;
 }
 
 .fi-ta-ctn .fi-ta-header-toolbar {
