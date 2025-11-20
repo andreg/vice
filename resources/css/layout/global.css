@@ -68,3 +68,13 @@ body {
 		margin-block-start: calc(var(--spacing) * 8);
 	}
 }
+
+a:not(:where(.fi-sidebar-item-btn,.fi-btn)):hover {
+    text-decoration: underline;
+}
+
+.fi-header {
+    & .fi-breadcrumbs {
+        margin-block-end: calc(var(--spacing) * 2.5);
+    }
+}

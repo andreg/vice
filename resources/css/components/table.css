@@ -107,6 +107,7 @@
 
 .fi-pagination {
 	padding-inline: 1px;
+    padding-block-start: calc(var(--spacing) * 4);
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row-reverse;

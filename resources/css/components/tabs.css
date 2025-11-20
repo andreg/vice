@@ -2,6 +2,10 @@
 	box-shadow: 0 0 0 1px var(--vice-color-bg-separation);
 	background-color: transparent;
 	column-gap: calc(var(--spacing) * 2);
+
+    &:not(.fi-contained) {
+        border-radius: calc(var(--radius-lg) + (var(--spacing) * 2));
+    }
 }
 
 .fi-tabs-item.fi-active {
