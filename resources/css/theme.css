@@ -39,8 +39,8 @@
 	--vice-color-bg-separation-shadow: 0 2px 0 1px oklch( from var(--vice-color-bg-separation) l c h / 0.3 );
 
 	&.dark {
-		--vice-color-text: var(--color-gray-400 );
-		--vice-color-text-weak: var(--color-gray-600 );
+		--vice-color-text: var(--color-gray-300 );
+		--vice-color-text-weak: var(--color-gray-500 );
 		--vice-color-text-strong: var(--color-gray-200 );
 		--vice-color-text-stronger: var(--color-white );
 		--vice-color-bg-canvas: var(--color-gray-900);

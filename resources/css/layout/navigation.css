@@ -9,6 +9,14 @@
 	.fi-topbar {
 		background-color: transparent;
 	}
+
+    .fi-topbar-ctn {
+        pointer-events: none;
+
+        :where(.fi-icon-btn,.fi-dropdown,a) {
+            pointer-events: initial;
+        }
+    }
 }
 
 .fi-body-has-top-navigation {
