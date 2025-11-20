@@ -18,8 +18,8 @@
 	box-shadow: 0 0 0 1px var(--vice-color-bg-separation-dimmed);
 }
 
-.fi-tabs + .fi-sc-tabs-tab {
-	margin-block-start: calc(var(--spacing) * 12);
+.fi-sc-tabs-tab {
+	margin-block-start: calc(var(--spacing) * 10);
 }
 
 .fi-sc-tabs-tab {
