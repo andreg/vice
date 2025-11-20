@@ -2,6 +2,12 @@ label[for] {
 	cursor: pointer;
 }
 
+.fi-fo-field {
+    grid-template-rows: auto 1fr;
+    grid-auto-rows: auto;
+    min-height: 100%;
+}
+
 .fi-input-wrp {
 	box-shadow: 0 0 0 1px var(--vice-color-bg-separation);
 
@@ -19,4 +25,14 @@ label[for] {
 			border-color: var(--vice-color-bg-separation-dimmed);
 		}
 	}
+}
+
+.fi-fo-textarea-wrp {
+    .fi-input-wrp-content-ctn > div {
+        height: 100%;
+    }
+
+    .fi-fo-field-content-col {
+        grid-template-rows: 1fr auto;
+    }
 }
