@@ -69,8 +69,12 @@ body {
 	}
 }
 
-a:not(:where(.fi-sidebar-item-btn,.fi-btn)):hover {
+a:not(:has(.fi-copyable)):not(:where(.fi-sidebar-item-btn,.fi-btn)):hover {
     text-decoration: underline;
+}
+
+a:has(.fi-copyable):hover .fi-copyable {
+    font-weight: bold;
 }
 
 .fi-header {

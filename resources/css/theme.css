@@ -13,6 +13,7 @@
 @import "./components/form/toggle.css";
 @import "./components/form/repeater.css";
 @import "./components/form/radio.css";
+@import "./components/form/richtext.css";
 @import "./components/widgets/stats-overview.css";
 
 @source '../../../../../vendor/andreg/filament-enhancer';
