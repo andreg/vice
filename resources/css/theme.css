@@ -17,6 +17,7 @@
 @import "./components/widgets/stats-overview.css";
 
 @source '../../../../../vendor/andreg/filament-enhancer';
+@source '../../../../../vendor/**/*.blade.php';
 @source '../../../../../app/Filament';
 @source '../../../../../resources/views/filament';
 

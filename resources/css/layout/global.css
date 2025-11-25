@@ -73,10 +73,6 @@ a:not(:has(.fi-copyable)):not(:where(.fi-sidebar-item-btn,.fi-btn)):hover {
     text-decoration: underline;
 }
 
-a:has(.fi-copyable):hover .fi-copyable {
-    font-weight: bold;
-}
-
 .fi-header {
     & .fi-breadcrumbs {
         margin-block-end: calc(var(--spacing) * 2.5);
