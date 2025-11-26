@@ -12,8 +12,11 @@
 
     .fi-topbar-ctn {
         pointer-events: none;
+    }
 
-        :where(.fi-icon-btn,.fi-dropdown,a) {
+    .fi-topbar-end,
+    .fi-topbar-start {
+        > * {
             pointer-events: initial;
         }
     }
