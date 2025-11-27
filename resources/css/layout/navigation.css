@@ -9,11 +9,22 @@
 	.fi-topbar {
 		background-color: transparent;
 	}
+
+    .fi-topbar-ctn {
+        pointer-events: none;
+    }
+
+    .fi-topbar-end,
+    .fi-topbar-start {
+        > * {
+            pointer-events: initial;
+        }
+    }
 }
 
 .fi-body-has-top-navigation {
 	.fi-topbar {
-		background-color: var( --vice-color-bg-canvas );
+		background-color: var(--vice-color-bg-canvas);
 
 		&:before {
 			position: absolute;
@@ -23,14 +34,14 @@
 			right: 0;
 			width: 100%;
 			top: 100%;
-			background: linear-gradient(in oklch to bottom, var( --vice-color-bg-canvas ), transparent);
+			background: linear-gradient(in oklch to bottom, var(--vice-color-bg-canvas), transparent);
 			height: calc( var(--spacing) * 8 );
 		}
 	}
 
 	.fi-active {
 		.fi-topbar-item-btn {
-			background-color: var( --vice-color-bg-main );
+			background-color: var(--vice-color-bg-main);
 		}
 	}
 }
@@ -43,14 +54,14 @@
 	> [class*="-item-btn"] {
 		@apply vice-sectioning-box;
 
-		background-color: var( --vice-color-bg-main );
+		background-color: var(--vice-color-bg-main);
 		border-radius: var(--radius-lg);
 		/* box-shadow:
-			0 0 0 1px var( --vice-color-bg-separation ),
-			var( --vice-color-bg-separation-shadow ); */
+			0 0 0 1px var(--vice-color-bg-separation),
+			var(--vice-color-bg-separation-shadow); */
 
 		> [class*="-item-label"] {
-			color: var( --vice-color-text-stronger );
+			color: var(--vice-color-text-stronger);
 		}
 	}
 }

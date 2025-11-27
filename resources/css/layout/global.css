@@ -7,7 +7,7 @@
 }
 
 .fi-body {
-	color: var( --vice-color-text );
+	color: var(--vice-color-text);
 }
 
 .fi-ta-text-item {
@@ -21,7 +21,7 @@
 
 .fi-fo-field-label-content,
 .fi-fo-radio-label-text {
-	color: var( --vice-color-text-strong );
+	color: var(--vice-color-text-strong);
 }
 
 .fi-logo,
@@ -30,17 +30,17 @@
 .fi-wi-stats-overview-stat-value,
 .fi-fo-repeater-item-header-label,
 .fi-ta-header-cell {
-	color: var( --vice-color-text-stronger );
+	color: var(--vice-color-text-stronger);
 }
 
 html,
 body {
-	background-color: var( --vice-color-bg-canvas );
+	background-color: var(--vice-color-bg-canvas);
 }
 
 .fi-main {
 	min-height: 100vh;
-	background-color: var( --vice-color-bg-main );
+	background-color: var(--vice-color-bg-main);
 
 	border-block-start: 1px solid var(--vice-color-bg-separation);
 	border-inline: 1px solid var(--vice-color-bg-separation);
@@ -67,4 +67,14 @@ body {
 	.fi-main {
 		margin-block-start: calc(var(--spacing) * 8);
 	}
+}
+
+a:not(:has(.fi-copyable)):not(:where(.fi-sidebar-item-btn,.fi-btn)):hover {
+    text-decoration: underline;
+}
+
+.fi-header {
+    & .fi-breadcrumbs {
+        margin-block-end: calc(var(--spacing) * 2.5);
+    }
 }

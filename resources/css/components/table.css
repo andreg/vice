@@ -5,7 +5,11 @@
 	overflow: visible;
 }
 
-.fi-ta-header-ctn,
+.fi-ta-header-ctn {
+	border-bottom-width: 0;
+	overflow: visible;
+}
+
 .fi-ta-content-ctn {
 	border-bottom-width: 0;
 	overflow: visible;
@@ -103,6 +107,7 @@
 
 .fi-pagination {
 	padding-inline: 1px;
+    padding-block-start: calc(var(--spacing) * 4);
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row-reverse;
