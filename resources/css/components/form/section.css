@@ -23,3 +23,13 @@
 		@apply vice-sectioning-box-content;
 	}
 }
+
+.fi-section-content-ctn {
+    background-color: var(--vice-color-bg-main);
+    border-bottom-right-radius: var(--radius-xl);
+    border-bottom-left-radius: var(--radius-xl);
+}
+
+.fi-wi-widget .fi-section-content-ctn {
+    border-radius: var(--radius-xl);
+}
