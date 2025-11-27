@@ -4,13 +4,14 @@
 	column-gap: calc(var(--spacing) * 2);
 }
 
-.fi-tabs-item.fi-active {
+.fi-tabs-item.fi-active,
+.fi-tabs-item.fi-active:hover {
 	background-color: var(--vice-color-bg-separation-fainted);
 	box-shadow: 0 0 0 1px var(--vice-color-bg-separation);
 }
 
 .fi-tabs-item:hover {
-	background-color: var(--vice-color-bg-separation-fainted);
+	background-color: transparent;
 	box-shadow: 0 0 0 1px var(--vice-color-bg-separation-dimmed);
 }
 
