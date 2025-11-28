@@ -1,0 +1,35 @@
+.fi-global-search-ctn {
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: var(--vice-color-bg-separation-fainted);
+        opacity: .9;
+    }
+
+    &:has(:focus-within),
+    &:has(.fi-global-search:hover) {
+        opacity: 1;
+        pointer-events: initial !important;
+    }
+}
+
+.fi-global-search {
+    max-width: 40rem;
+    padding: calc(var(--spacing)*10);
+}
+
+.fi-global-search-results-ctn {
+    max-width: 40rem;
+    width: 100%;
+    margin-block-start: calc(var(--spacing)*2.5);
+    position: relative;
+}

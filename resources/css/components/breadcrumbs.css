@@ -1,0 +1,5 @@
+.fi-breadcrumbs {
+    .fi-breadcrumbs-item:not(:last-child) .fi-breadcrumbs-item-label {
+        color: var(--vice-color-text-weak);
+    }
+}
