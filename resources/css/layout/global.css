@@ -38,9 +38,24 @@ body {
 	background-color: var(--vice-color-bg-canvas);
 }
 
+.fi-main-ctn {
+    background-color: var(--vice-color-bg-main);
+    border-top: 1px solid var(--vice-color-bg-separation);
+
+    @media (width >= 64rem) {
+        border-top: none;
+        border-left: 1px solid var(--vice-color-bg-separation);
+    }
+}
+
 .fi-main {
 	min-height: 100vh;
-    padding-inline: 0;
+    max-width: 90.5rem;
+
+    @media (width >= 64rem) {
+        padding-inline: calc(var(--spacing) * 8);
+    }
+
 	/* background-color: var(--vice-color-bg-main);
 
 	border-block-start: 1px solid var(--vice-color-bg-separation);
@@ -65,6 +80,12 @@ body {
 }
 
 .fi-body-has-top-navigation {
+    @media (width >= 64rem) {
+        .fi-layout {
+            border-top: 1px solid var(--vice-color-bg-separation);
+        }
+    }
+
 	.fi-main {
 		margin-block-start: calc(var(--spacing) * 8);
 	}
@@ -97,6 +118,7 @@ a:not(:has(.fi-copyable)):not(:where(.fi-sidebar-item-btn,.fi-btn)):hover {
         opacity: .9;
     }
 
+    &:has(:focus-within),
     &:has(.fi-input:focus),
     &:has(.fi-global-search:hover) {
         opacity: 1;

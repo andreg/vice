@@ -5,12 +5,12 @@
 	}
 }
 
-.fi-body-has-navigation:not(.fi-body-has-top-navigation) {
+.fi-body-has-navigation {
 	.fi-topbar {
 		background-color: transparent;
 	}
 
-    .fi-topbar-ctn {
+    /* .fi-topbar-ctn {
         pointer-events: none;
     }
 
@@ -19,13 +19,22 @@
         > * {
             pointer-events: initial;
         }
+    } */
+}
+
+body:not(.fi-body-has-top-navigation) {
+    @media (width >= 64rem) {
+        .fi-topbar-ctn {
+            max-width: 20rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
     }
 }
 
-.fi-body-has-top-navigation {
-	.fi-topbar {
-		background-color: var(--vice-color-bg-canvas);
-
+/* .fi-body-has-top-navigation { */
+	/* .fi-topbar {
 		&:before {
 			position: absolute;
 			content: "";
@@ -37,20 +46,20 @@
 			background: linear-gradient(in oklch to bottom, var(--vice-color-bg-canvas), transparent);
 			height: calc( var(--spacing) * 8 );
 		}
-	}
+	} */
 
-	.fi-active {
+	/* .fi-active {
 		.fi-topbar-item-btn {
 			background-color: var(--vice-color-bg-main);
 		}
-	}
-}
+	} */
+/* } */
 
 [class*="-item-label"] {
 	color: var(--vice-color-text);
 }
 
-.fi-sidebar-item.fi-active {
+:is(.fi-sidebar-item,.fi-topbar-item).fi-active {
 	> [class*="-item-btn"] {
 		@apply vice-sectioning-box;
 
