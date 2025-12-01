@@ -1,0 +1,17 @@
+.fi-modal-window {
+    .dark & {
+        background-color: var(--vice-color-bg-main);
+    }
+}
+
+.fi-modal-header {
+    .dark & {
+        background-color: var(--vice-color-bg-main);
+    }
+}
+
+.fi-modal-footer {
+    .dark & {
+        background-color: var(--vice-color-bg-main);
+    }
+}
