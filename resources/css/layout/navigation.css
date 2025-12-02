@@ -72,3 +72,7 @@ body:not(.fi-body-has-top-navigation) {
         box-shadow: 0 0 0 1px var(--vice-color-bg-separation), var( --vice-color-bg-separation-shadow );
     }
 }
+
+.fi-topbar-start .fi-logo {
+	margin-inline-start: 0;
+}
