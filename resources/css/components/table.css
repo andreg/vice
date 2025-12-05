@@ -52,8 +52,8 @@
 
 .fi-ta-header-cell {
 	@media (width >= 40rem) {
-			padding-inline-start: 0;
-			padding-inline-end: 0;
+		padding-inline-start: 0;
+		padding-inline-end: 0;
 	}
 }
 
@@ -80,11 +80,11 @@
 .fi-ta-cell {
 	@media (width >= 40rem) {
 		&:first-of-type {
-			padding-inline-start: 0;
+			padding-inline-start: 1px;
 		}
 
 		&:last-of-type {
-			padding-inline-end: 0;
+			padding-inline-end: 1px;
 		}
 	}
 
@@ -103,7 +103,9 @@
 
 .fi-ta-text {
 	&:not(.fi-inline) {
-		padding-inline-start: 0;
+		@media (width >= 40rem) {
+			padding-inline-start: 0;
+		}
 	}
 }
 
