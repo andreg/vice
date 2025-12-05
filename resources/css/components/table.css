@@ -97,6 +97,10 @@
 			margin-top: -0.2rem;
 		}
 	}
+
+	.fi-ta-icon {
+		padding-inline: 0;
+	}
 }
 
 .fi-ta-text {
