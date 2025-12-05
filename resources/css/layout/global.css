@@ -2,9 +2,9 @@
 	font-feature-settings: "tnum", "ss01", "zero", "cv11";
 }
 
-@view-transition {
+/* @view-transition {
 	navigation: auto;
-}
+} */
 
 .fi-body {
 	color: var(--vice-color-text);
