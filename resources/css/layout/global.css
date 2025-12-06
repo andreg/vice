@@ -67,3 +67,7 @@ a:not(:has(.fi-copyable)):not(:where(.fi-sidebar-item-btn,.fi-btn)):hover {
         margin-block-end: calc(var(--spacing) * 2.5);
     }
 }
+
+.fi-loading-section {
+	background-color: transparent;
+}
