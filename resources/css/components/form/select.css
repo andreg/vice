@@ -1,4 +1,4 @@
-.fi-select-input {
+:is(.fi-fo-tags-input-tags-ctn,.fi-select-input) {
     .fi-badge {
         color: var(--color-gray-700);
         background-color: var(--color-gray-100);

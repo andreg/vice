@@ -11,11 +11,13 @@
 
 .fi-ta-content-ctn {
 	border-bottom-width: 0;
+    border-top: 1px solid var(--vice-color-bg-separation);
 }
 
 .fi-ta-ctn .fi-ta-header-toolbar {
 	padding-inline: 0;
 	border-top: none;
+	border-bottom: none;
 	/* justify-content: space-between;
 	flex-direction: row-reverse;
 
@@ -131,4 +133,8 @@
 	.fi-ta-text-summary {
 		padding-inline: 0;
 	}
+}
+
+.fi-ta-selection-indicator {
+    margin-block-end: 1em;
 }
