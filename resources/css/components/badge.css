@@ -12,3 +12,9 @@
 	--dark-text: var(--color-800);
 	background-color: var(--color-300);
 }
+
+.fi-badge-delete-btn {
+    svg {
+        fill: inherit;
+    }
+}
