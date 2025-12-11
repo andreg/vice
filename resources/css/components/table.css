@@ -138,3 +138,11 @@
 .fi-ta-selection-indicator {
     margin-block-end: 1em;
 }
+
+.fi-ta-filter-indicators-badges-ctn {
+    .fi-badge-delete-btn {
+        svg {
+            fill: inherit;
+        }
+    }
+}
