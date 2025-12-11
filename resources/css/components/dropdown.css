@@ -1,5 +1,11 @@
 .fi-dropdown-panel {
+    z-index: 40;
+
     .dark & {
         background-color: var(--vice-color-bg-main);
     }
+}
+
+.fi-dropdown {
+    z-index: unset;
 }
