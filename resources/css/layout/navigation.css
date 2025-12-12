@@ -3,6 +3,11 @@
         background-color: transparent;
 		--tw-shadow-color: transparent;
 		--tw-ring-color: transparent;
+
+		@media (width < 64rem) {
+			background-color: var(--vice-color-bg-canvas);
+			--tw-ring-color: var(--vice-color-bg-separation);
+		}
 	}
 }
 
