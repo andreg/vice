@@ -5,6 +5,7 @@ namespace Andreg\Vice;
 use Andreg\Vice\Enums\NavigationPosition;
 use Andreg\Vice\Support\Color;
 use Filament\Contracts\Plugin;
+use Filament\Enums\GlobalSearchPosition;
 use Filament\Enums\UserMenuPosition;
 use Filament\FontProviders\LocalFontProvider;
 use Filament\Panel;
@@ -63,10 +64,18 @@ class VicePlugin implements Plugin {
 		if ( ! empty( $this->config[ 'navigation' ] ) && NavigationPosition::Topbar === $this->config[ 'navigation' ] ) {
 			$panel->topNavigation( true );
 			$panel->userMenu( position: UserMenuPosition::Topbar );
+
+			if ( $this->config[ 'globalSearch' ] ?? false ) {
+				$panel->globalSearch( position: GlobalSearchPosition::Topbar );
+			}
 		}
 		else {
 			$panel->topNavigation( false );
 			$panel->userMenu( position: UserMenuPosition::Sidebar );
+
+			if ( $this->config[ 'globalSearch' ] ?? false ) {
+				$panel->globalSearch( position: GlobalSearchPosition::Sidebar );
+			}
 		}
 
 		$panel->font(
