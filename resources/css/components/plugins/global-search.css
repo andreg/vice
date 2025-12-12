@@ -10,9 +10,26 @@
     .fi-global-search-result {
         padding: 0;
         margin: 0;
+        position: relative;
 
         &:hover {
             background-color: transparent;
+        }
+
+        &:focus-within {
+            background-color: transparent;
+
+            a::before {
+                content: "";
+                position: absolute;
+                left: calc(var(--spacing) * -4);
+                top: calc(var(--spacing) * 2);
+                bottom: calc(var(--spacing) * 2);
+                width: 5px;
+                border-top-right-radius: var(--radius-lg);
+                border-bottom-right-radius: var(--radius-lg);
+                background-color: var(--color-primary-400);
+            }
         }
 
         a {

@@ -22,6 +22,7 @@
 @import "./components/form/easy-mde-editor.css";
 @import "./components/widgets/stats-overview.css";
 @import "./components/plugins/global-search.css";
+@import "./components/plugins/kanban.css";
 
 @source '../../../../../vendor/andreg/filament-enhancer';
 @source '../../../../../vendor/**/*.blade.php';

@@ -1,0 +1,81 @@
+.flex-row:has(.flowforge-column) {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax( 300px, 1fr ) );
+}
+
+.flowforge-column {
+    width: 100%;
+    min-width: auto;
+    box-shadow: none;
+
+    @media screen and (max-width:1024px) {
+        min-height: 80vh;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .fi-page-content > .h-\[calc\(100vh-11rem\)\] {
+        height: auto;
+    }
+}
+
+.flowforge-column-content {
+    position: relative;
+    background-color: var(--vice-color-bg-separation-fainted);
+
+    > .flex-col {
+        position: absolute;
+        height: calc(100% - (var(--spacing) * 6));
+        inset: calc(var(--spacing) * 3);
+        border: none;
+    }
+}
+
+.flowforge-card-content {
+    > .p-3:not(:has(div)),
+    > .p-3:has(.archived) {
+        display: none;
+    }
+
+    > .p-3 {
+        padding-block-start: 0;
+
+        > .fi-sc {
+            display: flex;
+            gap: 1.5em;
+        }
+    }
+
+    > div:first-child {
+        margin-block-end: 0;
+    }
+
+    .fi-in-text {
+        display: flex;
+        align-items: center;
+        gap: .5em;
+        font-size: 12px;
+        color: var(--vice-color-text-weak);
+
+        svg {
+            width: 13px;
+            height: 13px;
+        }
+    }
+}
+
+.fi-sc-component:has(.archived) {
+    display: none;
+}
+
+.flowforge-card-content:has(.archived) {
+    background-image: repeating-linear-gradient( 45deg, var(--vice-color-bg-separation-fainted) 2px, transparent 4px, transparent 8px);
+
+    h4 {
+        color: var(--vice-color-text-weak);
+        font-weight: normal;
+    }
+}
+[data-column-id="completed"] .flowforge-card-content > .p-3 {
+    display: none;
+}
