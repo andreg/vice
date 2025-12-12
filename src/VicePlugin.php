@@ -82,6 +82,11 @@ class VicePlugin implements Plugin {
 			}
 		}
 
+		if ( $this->config[ 'globalSearch' ] && $this->config[ 'globalSearch' ][ 'keyBinding' ] ?? false ) {
+			$panel->globalSearchKeyBindings( $this->config[ 'globalSearch' ][ 'keyBinding' ] );
+			$panel->globalSearchFieldKeyBindingSuffix();
+		}
+
 		$panel->font(
 			family: 'InterVariable',
 			url: asset( 'vendor/andreg/vice/fonts/inter.css' ),
