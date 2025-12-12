@@ -135,6 +135,13 @@
 	}
 }
 
-.fi-ta-selection-indicator {
+:where(.fi-ta-selection-indicator, .fi-ta-filter-indicators) {
     margin-block-end: 1em;
 }
+
+.fi-ta-filter-indicators {
+    padding-inline: calc( var(--spacing) * 3 );
+    border-radius: var(--radius-lg);
+    border-bottom: none;
+}
+
