@@ -5,7 +5,7 @@
     margin: 0;
 
     &:not(.fi-contained) {
-        border-radius: calc(var(--radius-lg) + (var(--spacing) * 2));
+        border-radius: var(--radius-xl);
     }
 }
 
