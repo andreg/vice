@@ -26,6 +26,19 @@
 	} */
 }
 
+.fi-ta-header-toolbar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &:has(.fi-ta-actions) {
+        .fi-ta-filter-indicators {
+            margin-block-end: 0;
+        }
+    }
+}
+
 .fi-ta-selection-indicator {
 	padding-inline: calc( var(--spacing) * 3 );
 	border: none;
@@ -140,8 +153,13 @@
 }
 
 .fi-ta-filter-indicators {
+    padding-block-start: 0;
     padding-inline: calc( var(--spacing) * 3 );
     border-radius: var(--radius-lg);
     border-bottom: none;
+    background-color: transparent;
 }
 
+.fi-ta-filters-apply-action-ctn {
+    padding-block-start: calc(var(--spacing) * 6) !important;
+}
