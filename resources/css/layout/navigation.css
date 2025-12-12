@@ -13,7 +13,12 @@
 
 .fi-body-has-top-navigation .fi-topbar-ctn {
     background-color: var(--vice-color-bg-canvas);
-    border-bottom: 1px solid var(--vice-color-bg-separation);
+	border-bottom: 1px solid var(--vice-color-bg-separation);
+
+	@media (width < 64rem) {
+		--tw-ring-color: var(--vice-color-bg-separation);
+		border-bottom: none;
+	}
 }
 
 body:not(.fi-body-has-top-navigation) {
