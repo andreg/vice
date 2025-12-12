@@ -21,6 +21,7 @@
 @import "./components/form/richtext.css";
 @import "./components/form/easy-mde-editor.css";
 @import "./components/widgets/stats-overview.css";
+@import "./components/plugins/global-search.css";
 
 @source '../../../../../vendor/andreg/filament-enhancer';
 @source '../../../../../vendor/**/*.blade.php';
@@ -36,6 +37,7 @@
 	--radius-xs: .025rem;
 
 	--vice-color-text: var(--color-gray-600 );
+    --vice-color-text-mid: var(--color-gray-500 );
 	--vice-color-text-weak: var(--color-gray-400 );
 	--vice-color-text-strong: var(--color-gray-800 );
 	--vice-color-text-stronger: var(--color-gray-900 );
@@ -48,6 +50,7 @@
 
 	&.dark {
 		--vice-color-text: var(--color-gray-100 );
+		--vice-color-text-mid: var(--color-gray-200 );
 		--vice-color-text-weak: var(--color-gray-300 );
 		--vice-color-text-strong: var(--color-gray-100 );
 		--vice-color-text-stronger: var(--color-white );
