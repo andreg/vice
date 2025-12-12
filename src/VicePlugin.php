@@ -32,6 +32,10 @@ class VicePlugin implements Plugin {
 	}
 
 	public function register( Panel $panel ): void {
+		if ( isset( $this->config[ 'enabled' ] ) && false === $this->config[ 'enabled' ] ) {
+			return;
+		}
+
 		$defaultColors = [
 			'danger'  => Color::Red,
 			'gray'    => [
