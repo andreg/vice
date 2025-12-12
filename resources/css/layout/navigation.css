@@ -86,3 +86,8 @@ body:not(.fi-body-has-top-navigation) {
 .fi-topbar-start .fi-logo {
 	margin-inline-start: 0;
 }
+
+.fi-global-search-ctn .fi-input-wrp-label {
+	font-family: var(--font-mono);
+	color: var(--gray-400);
+}
