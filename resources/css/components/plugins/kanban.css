@@ -44,6 +44,17 @@
             display: flex;
             gap: 1.5em;
         }
+
+        .fi-sc-component > .fi-icon {
+            width: 13px;
+            height: 13px;
+            stroke: var(--vice-color-text-weak);
+        }
+
+        .fi-sc-component {
+            display: flex;
+            align-items: center;
+        }
     }
 
     > div:first-child {
@@ -79,15 +90,4 @@
 
 [data-column-id="completed"] .flowforge-card-content > .p-3 {
     display: none;
-}
-
-.fi-sc-component > .fi-icon {
-    width: 13px;
-    height: 13px;
-    stroke: var(--vice-color-text-weak);
-}
-
-.fi-sc-component {
-    display: flex;
-    align-items: center;
 }
