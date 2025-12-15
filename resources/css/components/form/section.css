@@ -33,7 +33,11 @@
     border-bottom-right-radius: var(--radius-xl);
     border-bottom-left-radius: var(--radius-xl);
 
-    .fi-wi-widget & {
+	&:has(.fi-wi-widget) {
+		background-color: transparent;
+	}
+
+    .fi-wi-widget {
         background-color: var(--vice-color-bg-canvas);
         border-radius: var(--radius-xl);
     }

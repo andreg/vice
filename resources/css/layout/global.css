@@ -58,9 +58,9 @@ body {
     }
 }
 
-a:not(:has(.fi-copyable)):not(:where(.fi-sidebar-item-btn,.fi-btn)):not(:has(svg)):hover {
+/* a:not(:has(.fi-copyable)):not(:where(.fi-sidebar-item-btn,.fi-btn)):not(:has(svg)):hover {
     text-decoration: underline;
-}
+} */
 
 .fi-header {
     & .fi-breadcrumbs {

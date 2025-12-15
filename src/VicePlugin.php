@@ -82,7 +82,7 @@ class VicePlugin implements Plugin {
 			}
 		}
 
-		if ( $this->config[ 'globalSearch' ] && $this->config[ 'globalSearch' ][ 'keyBinding' ] ?? false ) {
+		if ( isset( $this->config[ 'globalSearch' ] ) && $this->config[ 'globalSearch' ][ 'keyBinding' ] ?? false ) {
 			$panel->globalSearchKeyBindings( $this->config[ 'globalSearch' ][ 'keyBinding' ] );
 			$panel->globalSearchFieldKeyBindingSuffix();
 		}
