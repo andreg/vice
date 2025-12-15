@@ -13,6 +13,10 @@
         position: relative;
         background-color: transparent;
 
+        + .fi-global-search-result {
+            margin-block-start: calc(var(--spacing)*2);
+        }
+
         &:hover {
             background-color: transparent;
         }
@@ -100,7 +104,7 @@
             overflow: unset;
 
             > ul > li + li {
-                margin-block-start: calc(var(--spacing) * 3);
+                margin-block-start: calc(var(--spacing)*6);
             }
         }
 
@@ -145,6 +149,6 @@
 
 .global-search-modal {
     > div:not(:first-of-type) {
-        margin-block-start: calc(var(--spacing)*3);
+        margin-block-start: calc(var(--spacing)*6);
     }
 }
