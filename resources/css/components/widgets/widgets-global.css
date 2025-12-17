@@ -1,3 +1,7 @@
 .fi-wi-widget:has(.fi-section-content.fi-grid) {
     background-color: transparent;
 }
+
+.fi-wi-chart-canvas-ctn canvas {
+    height: 400px !important;
+}
