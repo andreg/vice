@@ -10,7 +10,7 @@
 	color: var(--vice-color-text);
 }
 
-.fi-ta-text-item {
+.fi-ta-text-item:not(.fi-color) {
 	color: inherit;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .fi-logo,
-.fi-font-semibold,
+.fi-font-semibold:not(.fi-color),
 .fi-section-header-heading,
 .fi-wi-stats-overview-stat-value,
 .fi-fo-repeater-item-header-label,
