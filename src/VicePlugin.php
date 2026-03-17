@@ -88,7 +88,7 @@ class VicePlugin implements Plugin {
 		}
 
 		$panel->font(
-			family: 'InterVariable',
+			family: 'Inter Variable',
 			url: asset( 'vendor/andreg/vice/fonts/inter.css' ),
 			provider: LocalFontProvider::class
 		);
