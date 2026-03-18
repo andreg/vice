@@ -9,8 +9,12 @@ use Filament\Enums\GlobalSearchPosition;
 use Filament\Enums\UserMenuPosition;
 use Filament\FontProviders\LocalFontProvider;
 use Filament\Panel;
+use Filament\View\PanelsRenderHook;
+use Illuminate\Support\HtmlString;
 
 class VicePlugin implements Plugin {
+
+	private const THEME_PATH = 'vendor/andreg/vice/resources/css/theme.css';
 
 	private array $config = [];
 
@@ -93,7 +97,50 @@ class VicePlugin implements Plugin {
 			provider: LocalFontProvider::class
 		);
 
-		$panel->viteTheme( 'vendor/andreg/vice/resources/css/theme.css' );
+		if ( $inlineTheme = $this->getInlineThemeStyles() ) {
+			$panel->renderHook( PanelsRenderHook::HEAD_START, fn (): HtmlString => $inlineTheme );
+		}
+		else {
+			$panel->viteTheme( self::THEME_PATH );
+		}
+	}
+
+	private function getInlineThemeStyles(): ?HtmlString {
+		if ( ! ( $this->config[ 'inlineTheme' ] ?? true ) ) {
+			return null;
+		}
+
+		$manifestPath = public_path( 'build/manifest.json' );
+
+		if ( ! is_file( $manifestPath ) ) {
+			return null;
+		}
+
+		$manifest = json_decode( file_get_contents( $manifestPath ), true );
+
+		if ( ! is_array( $manifest ) ) {
+			return null;
+		}
+
+		$builtThemePath = $manifest[ self::THEME_PATH ][ 'file' ] ?? null;
+
+		if ( ! is_string( $builtThemePath ) ) {
+			return null;
+		}
+
+		$compiledCssPath = public_path( 'build/' . ltrim( $builtThemePath, '/' ) );
+
+		if ( ! is_file( $compiledCssPath ) ) {
+			return null;
+		}
+
+		$compiledCss = file_get_contents( $compiledCssPath );
+
+		if ( ! is_string( $compiledCss ) || '' === trim( $compiledCss ) ) {
+			return null;
+		}
+
+		return new HtmlString( '<style id="vice-inline-theme">' . str_replace( '</style', '<\\/style', $compiledCss ) . '</style>' );
 	}
 
 	public function boot( Panel $panel ): void {}

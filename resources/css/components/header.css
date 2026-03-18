@@ -38,6 +38,7 @@
 
 .fi-header-heading {
     grid-area: header;
+	font-weight: var(--font-weight-medium);
 }
 
 .fi-header-actions-ctn {

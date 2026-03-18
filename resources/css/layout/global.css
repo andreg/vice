@@ -33,6 +33,10 @@
 	color: var(--vice-color-text-stronger);
 }
 
+.fi-logo {
+	font-weight: var(--font-weight-medium);
+}
+
 html,
 body {
 	background-color: var(--vice-color-bg-canvas);
