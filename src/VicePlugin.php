@@ -14,7 +14,12 @@ use Illuminate\Support\HtmlString;
 
 class VicePlugin implements Plugin {
 
-	private const THEME_PATH = 'vendor/andreg/vice/resources/css/theme.css';
+	private const PUBLISHED_THEME_PATH = 'vendor/andreg/vice/assets/theme.css';
+
+	private const VITE_THEME_PATHS = [
+		'packages/andreg/vice/resources/css/theme.css',
+		'vendor/andreg/vice/resources/css/theme.css',
+	];
 
 	private array $config = [];
 
@@ -92,7 +97,7 @@ class VicePlugin implements Plugin {
 		}
 
 		$panel->font(
-			family: 'Inter Variable',
+			family: 'ViceInterVariable',
 			url: asset( 'vendor/andreg/vice/fonts/inter.css' ),
 			provider: LocalFontProvider::class
 		);
@@ -100,8 +105,11 @@ class VicePlugin implements Plugin {
 		if ( $inlineTheme = $this->getInlineThemeStyles() ) {
 			$panel->renderHook( PanelsRenderHook::HEAD_START, fn (): HtmlString => $inlineTheme );
 		}
+		elseif ( $publishedThemeUrl = $this->getPublishedThemeUrl() ) {
+			$panel->theme( $publishedThemeUrl );
+		}
 		else {
-			$panel->viteTheme( self::THEME_PATH );
+			$panel->viteTheme( $this->getViteThemePath() );
 		}
 	}
 
@@ -109,6 +117,58 @@ class VicePlugin implements Plugin {
 		if ( ! ( $this->config[ 'inlineTheme' ] ?? true ) ) {
 			return null;
 		}
+
+		$compiledCss = $this->getPublishedThemeCss() ?? $this->getBuiltThemeCss();
+
+		if ( ! is_string( $compiledCss ) || '' === trim( $compiledCss ) ) {
+			return null;
+		}
+
+		return new HtmlString( '<style id="vice-inline-theme">' . str_replace( '</style', '<\\/style', $compiledCss ) . '</style>' );
+	}
+
+	private function getPublishedThemeUrl(): ?string {
+		$themePath = $this->findPublishedThemePath();
+
+		if ( ! $themePath ) {
+			return null;
+		}
+
+		return asset( $themePath );
+	}
+
+	private function getPublishedThemeCss(): ?string {
+		$themePath = $this->findPublishedThemePath();
+
+		if ( ! $themePath ) {
+			return null;
+		}
+
+		$compiledCss = file_get_contents( public_path( $themePath ) );
+
+		return is_string( $compiledCss ) ? $compiledCss : null;
+	}
+
+	private function findPublishedThemePath(): ?string {
+		$publishedDir = dirname( public_path( self::PUBLISHED_THEME_PATH ) );
+
+		if ( ! is_dir( $publishedDir ) ) {
+			return null;
+		}
+
+		$baseFilename = basename( self::PUBLISHED_THEME_PATH, '.css' );
+		$files        = glob( $publishedDir . '/' . $baseFilename . '*.css', GLOB_BRACE );
+
+		if ( ! is_array( $files ) || empty( $files ) ) {
+			return null;
+		}
+
+		$themeFile = reset( $files );
+
+		return 'vendor/andreg/vice/assets/' . basename( $themeFile );
+	}
+
+	private function getBuiltThemeCss(): ?string {
 
 		$manifestPath = public_path( 'build/manifest.json' );
 
@@ -122,25 +182,37 @@ class VicePlugin implements Plugin {
 			return null;
 		}
 
-		$builtThemePath = $manifest[ self::THEME_PATH ][ 'file' ] ?? null;
+		foreach ( self::VITE_THEME_PATHS as $themePath ) {
+			$builtThemePath = $manifest[ $themePath ][ 'file' ] ?? null;
 
-		if ( ! is_string( $builtThemePath ) ) {
-			return null;
+			if ( ! is_string( $builtThemePath ) ) {
+				continue;
+			}
+
+			$compiledCssPath = public_path( 'build/' . ltrim( $builtThemePath, '/' ) );
+
+			if ( ! is_file( $compiledCssPath ) ) {
+				continue;
+			}
+
+			$compiledCss = file_get_contents( $compiledCssPath );
+
+			if ( is_string( $compiledCss ) ) {
+				return $compiledCss;
+			}
 		}
 
-		$compiledCssPath = public_path( 'build/' . ltrim( $builtThemePath, '/' ) );
+		return null;
+	}
 
-		if ( ! is_file( $compiledCssPath ) ) {
-			return null;
+	private function getViteThemePath(): string {
+		foreach ( self::VITE_THEME_PATHS as $themePath ) {
+			if ( is_file( base_path( $themePath ) ) ) {
+				return $themePath;
+			}
 		}
 
-		$compiledCss = file_get_contents( $compiledCssPath );
-
-		if ( ! is_string( $compiledCss ) || '' === trim( $compiledCss ) ) {
-			return null;
-		}
-
-		return new HtmlString( '<style id="vice-inline-theme">' . str_replace( '</style', '<\\/style', $compiledCss ) . '</style>' );
+		return self::VITE_THEME_PATHS[ 0 ];
 	}
 
 	public function boot( Panel $panel ): void {}

@@ -24,7 +24,8 @@ class VicePluginServiceProvider extends PackageServiceProvider {
 			] );
 
 			$this->publishes( [
-				__DIR__ . '/../resources/dist' => public_path( 'vendor/andreg/vice' ),
+				__DIR__ . '/../resources/dist'  => public_path( 'vendor/andreg/vice' ),
+				__DIR__ . '/../resources/fonts' => public_path( 'vendor/andreg/vice/fonts' ),
 			], [ 'vice-assets' ] );
 		}
 	}

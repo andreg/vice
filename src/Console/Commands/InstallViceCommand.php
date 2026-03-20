@@ -24,6 +24,10 @@ class InstallViceCommand extends Command {
 	 * Execute the console command.
 	 */
 	public function handle() {
+		$dirname = public_path( 'vendor/andreg/vice' );
+
+		array_map( 'unlink', glob( $dirname . '/**/*' ) );
+
 		$this->call( 'vendor:publish', [
 			'--tag' => 'vice-assets',
 		] );
