@@ -58,7 +58,7 @@
 		--vice-color-text-stronger: var(--color-white );
 		--vice-color-bg-canvas: var(--color-gray-950);
 		--vice-color-bg-main: var(--gray-925,var(--color-gray-900));
-		--vice-color-bg-separation: var(--color-gray-800);
+		--vice-color-bg-separation: color-mix(in oklab, var(--color-gray-700) 80%, transparent 10%);
 		--vice-color-bg-separation-dimmed: var(--color-gray-900);
 		--vice-color-bg-separation-fainted: var(--color-gray-950);
 		--vice-color-bg-separation-shadow: 0 2px 0 1px oklch( from var(--vice-color-bg-separation-fainted) l c h / 0.6 );
