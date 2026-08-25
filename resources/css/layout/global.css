@@ -1,5 +1,5 @@
 :root {
-	font-feature-settings: "tnum", "ss01", "zero", "cv11";
+	font-feature-settings: "tnum", "ss01", "zero", "calt" 0, "cv01", "cv02", "cv03", "cv04", "cv11";
 }
 
 /* @view-transition {
