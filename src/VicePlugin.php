@@ -10,6 +10,7 @@ use Filament\Enums\UserMenuPosition;
 use Filament\FontProviders\LocalFontProvider;
 use Filament\Panel;
 use Filament\View\PanelsRenderHook;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\HtmlString;
 
 class VicePlugin implements Plugin {
@@ -114,7 +115,7 @@ class VicePlugin implements Plugin {
 	}
 
 	private function getInlineThemeStyles(): ?HtmlString {
-		if ( ! ( $this->config[ 'inlineTheme' ] ?? true ) ) {
+		if ( ! ( $this->config[ 'inlineTheme' ] ?? App::environment( 'production' ) ) ) {
 			return null;
 		}
 
