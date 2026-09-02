@@ -93,14 +93,12 @@
 }
 
 .fi-ta-cell {
-	@media (width >= 40rem) {
-		&:first-of-type {
-			padding-inline-start: 3px;
-		}
+	&:first-of-type {
+		padding-inline-start: 0;
+	}
 
-		&:last-of-type {
-			padding-inline-end: 3px;
-		}
+	&:last-of-type {
+		padding-inline-end: 0;
 	}
 
 	&.fi-ta-selection-cell {
@@ -116,11 +114,13 @@
 	}
 }
 
+.fi-ta-header-cell {
+	padding-inline-start: 0;
+}
+
 .fi-ta-text {
 	&:not(.fi-inline) {
-		@media (width >= 40rem) {
-			padding-inline-start: 0;
-		}
+		padding-inline-start: 0;
 	}
 }
 
